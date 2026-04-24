@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+    <title> 
+        Flor You!
+    </title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <header>
+        <img src="titleCard2.png" id="titleImage"></img>
+            <!--flor u-->
+    </header>
+
+    <!-- sets up tabs class for use-->
+    <div class="tab">
+        <button class="tablinks" 
+        onclick="openTabs(event,'home')">Home</button>
+
+        <button class="tablinks" 
+        onclick="openTabs(event,'bouquet')"> Flower Generator </button>
+
+        <button class="tablinks" 
+        onclick="openTabs(event,'directory')"> Flower Dictionary</button>
+      
+    
+    </div>
+
+
+<main>
+    <!--home tab -->
+    <div id="home" class="tabcontent"> 
+        <img class = "homeImage" src = "images/pinkLily.png">
+
+        <p id="homeFont"> 
+            Welcome to the home page for our final project!
+        </p>
+
+        <p id="homeFont">
+            This project is a flower recommendation website that suggests flowers 
+            based on YOUR feelings and the color you choose.
+            Personalize a bouquet for a special someone by picking out a flower.
+            Then visit our map to find a local flower shop to 
+            request a bouquet with said flower! 
+        </p>
+
+    </div>
+
+    <!-- bouquet tab-->
+    <div id="bouquet" class="tabcontent">
+    <section class="container">
+        <center>
+            <br></br>
+
+    
+    <!--layout for prompt-->    
+        <form id = "form">
+            <label id= "font" for="colorSelect"> Select Color : </label>
+            <select name="colors" id="colorSelect" class="backButton">
+                <option value="">--please select a color--</option>   
+                <option value="red"> Red </option>
+                <option value="orange"> Orange </option>
+                <option value="yellow"> Yellow </option>
+                <option value="green"> Green </option>
+                <option value="blue"> Blue </option>
+                <option value="purple"> Purple </option>
+                <option value="pink"> Pink </option>
+                <option value="white"> White </option>
+                <option value="black"> Black </option>
+            </select>
+
+
+            <p id = "font">
+                What feeling are you trying to express with this bouquet?
+            </p>
+
+    <!-- textbox -->
+                <input
+                    type = "text"
+                    id="feelingInput" 
+                    placeholder="enter a feeling...">
+
+    <!--submit button-->
+            <br></br>   
+
+                <button type ="submit" class="backButton">submit</button>
+                
+
+        </form>    
+    
+        <p id ="log" > </p>
+    <!-- default png cuz i couldnt figure out that null image thingy-->
+        <img 
+            id = "outputImage"
+            src = "default.png">
+
+        <p id="font" style="color:#6b5f55; font-size: small;">
+            EX: Color: Green , Feeling: Love --> Green Carnation
+        </p>
+        <p id="font" style="color:#6b5f55; font-size: small;">
+            EX: Color: empty , Feeling: Love --> Red Rose
+        </p>
+        <p id="font" style="color:#6b5f55; font-size: small;">
+            EX: Color: Orange, Feeling: Love -(no exact match)-> Red Rose
+        </p>    
+        
+        </center>
+    </section>  
+    </div>
+
+    <!-- directory tabs-->
+     <div id="directory" class="tabcontent" >
+       
+        <!-- info menu -->
+        <div id="directoryMenu">
+            <p id="font"> Dig into florgraphy!</p>
+            <button class="tablinks" 
+            onclick="openCategory('love')" id ="infoButton"> Love </button>
+            <button class="tablinks"
+            onclick="openCategory('justBecause')" id = "infoButton"> Just Because </button>
+            <button class="tablinks"
+            onclick="openCategory('dislike')" id = "infoButton"> Dislike </button>
+            <button class="tablinks"
+            onclick="openCategory('grief')" id = "infoButton"> Grief </button>
+        
+        </div>
+
+        <!---->
+
+        <div id="love" class="category" style="display:none">
+            <button onclick= "returnToMenu()" class="backButton"> <- back</button>
+
+            <p id="font"> Show someone your love </p>
+            
+            <div class="flowerInfo">
+            <img src = "images/redRose.png" class="infoImage" data-info="red rose: love, romance">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/redLily.png" class="infoImage" data-info="red lily: courage, love, confidence">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/redTulip.png" class="infoImage" data-info="red tulip: romance, declaration of love, perfect love">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/redDaisy.png" class="infoImage" data-info="red daisy: crush, admiration, love">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/redCarnation.png" class="infoImage" data-info="red carnations: I love you , romance">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/orangeRose.png" class="infoImage" data-info="orange rose: passion, desire">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/orangeCarnation.png" class="infoImage" data-info="orange carnations: desire, enthusiasm, admiration">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/blueRose.png" class="infoImage" data-info="blue rose: mystery, love at first sight">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/purpleRose.png" class="infoImage" data-info="purple rose: enchantment, royalty">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/pinkLily.png" class="infoImage" data-info="pink lily: innocence, pure love">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/pinkTulip.png" class="infoImage" data-info="pink tulip: caring, affection">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/pinkCarnation.png" class="infoImage" data-info="pink carnation: maternal love, fondness, purity">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/pinkOrchid.png" class="infoImage" data-info="pink orchid: grace, affection, appreciation ">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/pinkDaisy.png" class="infoImage" data-info="pink daisy: joy, platonic love, childlike love">
+            </div>
+            
+        </div>
+
+        <div id="justBecause" class="category" style="display:none">
+            <button onclick= "returnToMenu()" class="backButton"> <- back</button>
+
+            <p id="font"> Show someone you care...just because! </p>
+
+            <div class="flowerInfo">
+            <img src = "images/redLily.png" class="infoImage" data-info="red lily: courage, bravery, 'be brave'">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/orangeTulip.png" class="infoImage" data-info="orange tulip: appreciation, good job, enthusiasm">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/orangeDaisy.png" class="infoImage" data-info="orange daisy: joy, warmth, friendship">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/orangeOrchid.png" class="infoImage" data-info="orange orchid: energy, enthusiasm, warmth">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/yellowSunflower.png" class="infoImage" data-info="yellow sunflower: happy, cheerfulness, sunshine">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/yellowRose.png" class="infoImage" data-info="yellow rose: friendship, joy, get well">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/yellowLily.png" class="infoImage" data-info="yellow lily: prosperity, delight, friendship">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/yellowTulip.png" class="infoImage" data-info="yellow tulip: cheerfulness, sunshine, hope">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/yellowDaisy.png" class="infoImage" data-info="yellow daisy: get well, joy, pure friendship">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/yellowOrchid.png" class="infoImage" data-info="yellow orchid: good luck, happiness">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/greenHyd.png" class="infoImage" data-info="green hydrangeas: good luck">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/greenOrchid.png" class="infoImage" data-info="green orchid: good health, get well, health boost ">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/greenCarnation.png" class="infoImage" data-info="green carnation: resilience, good luck, new milestone">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/blueDaisy.png" class="infoImage" data-info="blue daisy: trust, deep loyalty, honesty">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/purpleTulip.png" class="infoImage" data-info="purple tulip: elegance, wealth">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/purpleHyd.png" class="infoImage" data-info="purple hydrangea: congratulations, wishes of abundance">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/purpleLily.png" class="infoImage" data-info="purple lily: proudness, royalty, dignified">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/purpleDaisy.png" class="infoImage" data-info="purple daisy: joy, spontaneity, ‘thinking of you’">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/pinkHyd.png" class="infoImage" data-info="pink hydrangea: thanks, sincere emotions, gratitude">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/pinkRose.png" class="infoImage" data-info="pink rose: gratitude, admiration, joy">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteRose.png" class="infoImage" data-info="white rose: innocence, new beginnings">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteDaisy.png" class="infoImage" data-info="white daisy: innocence , welcoming a new birth">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteCarnation.png" class="infoImage" data-info="white carnation: good luck, new adventure">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteOrchid.png" class="infoImage" data-info="white orchid: elegance, new beginnings, celebration of life">
+            </div>
+        </div>
+
+        <div id="dislike" class="category" style="display:none">
+            <button onclick= "returnToMenu()" class="backButton"> <- back</button>
+
+            <p id="font"> Show your dislike discretely </p>
+        
+            <div class="flowerInfo">
+            <img src = "images/orangeLily.png" class="infoImage" data-info="orange lily: hate, dislike">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/yellowCarnation.png" class="infoImage" data-info="yellow carnation: sorry, disappointment, rejection">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/blueCarnation.png" class="infoImage" data-info="blue carnation: distrust, suspicous">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/purpleOrchid.png" class="infoImage" data-info="purple orchid: mystery, distrust">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/blackRose.png" class="infoImage" data-info="black rose: anger, death wish">
+            </div>  
+        </div>
+
+        <div id="grief" class="category" style="display:none">
+            <button onclick= "returnToMenu()" class="backButton"> <- back</button>
+
+            <p id="font"> Show someone you care for their grief </p>
+            <div class="flowerInfo">
+            <img src = "images/blueHyd.png" class="infoImage" data-info="blue hydrangea: sorry, apologetic, failed love">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/purpleCarnation.png" class="infoImage" data-info="purple carnation: i'm sorry, forgive me, unpredictability">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteTulip.png" class="infoImage" data-info="white tulip: i'm sorry, forgiveness, respect, honor">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteHyd.png" class="infoImage" data-info ="white hydrangeas: sincereity, purity, abundance">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteLily.png" class="infoImage" data-info ="white lily: condolences, peace">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/whiteLilyofVal.png"   class="infoImage" data-info="white lily of the valley: promise, sympathy, promise of happiness">
+            </div>
+            <div class="flowerInfo">
+            <img src = "images/blackTulip.png" class="infoImage" data-info="black tulip: strength, stay strong">
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<!--current version-->
+<footer>
+    <p id = "font"> version 3.5  </p>
+</footer> 
+
+<script src = "directoryScript.js"></script>
+<script src = "flowerScript.js"></script>
+<script src = "tabsScript.js"></script>
+
+
+</body>
+</html>
+
+
+

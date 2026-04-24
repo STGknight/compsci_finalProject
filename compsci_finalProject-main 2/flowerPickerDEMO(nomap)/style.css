@@ -1,0 +1,188 @@
+/*THINGS FOR TABS*/
+/*tab set-up*/
+.tab {
+    overflow: hidden;
+    background-color: #f7f8f0;
+    border: 4px solid #220f00;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom: 0px;
+}
+
+.tab button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.2;
+}
+/*changes color on hover*/
+.tab button:hover{
+    background-color: #C5D975;
+}
+
+.tab button.active{
+    background-color: #C5D975;
+}
+
+.tabcontent {
+    display: none;
+    padding: 10px;
+    border-top: none;
+    flex-direction:row;
+}
+
+/*IMAGE CLASSES*/
+/*home page image*/
+.homeImage{
+    float: right;
+    image-rendering: pixelated;
+    outline: none;
+    width: 300px;
+    height: 300px;
+}
+
+.infoImage{
+    image-rendering: pixelated;
+    outline: none;
+    width: 200px;
+    height: 200px;
+    background-color: #d3d4c2;
+    border-color: #220f00;
+    border-style:dashed;
+    border-radius: 4px;
+}
+
+/*FLOWER DIRECTORY THINGS*/
+.backButton{
+    font-family: Georgia, serif, sans-serif;
+    background-color: #d3d4c2;
+    border-color: #220f00;
+    border-style:solid;
+    border-radius: 4px;
+}
+
+.flowerInfo{
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+    }
+
+.flowerInfo p{
+    margin-top: 5px;
+    padding: 5px 5px;
+    background-color: #d3d4c2;
+    border-color: #220f00;
+    border-style:dashed;
+    border-radius: 4px;
+}
+
+/*FONTS*/
+/* font id*/
+#font{
+    padding: 5px 5px;
+    font-family: Georgia, serif, sans-serif;
+    text-align: center;
+}
+/*home page styling*/
+#homeFont{
+    font-family: Georgia, serif, sans-serif;
+    letter-spacing: .5px;
+    padding: 10px 10px;
+    flex-direction: column;
+    flex-wrap: inherit;
+}
+
+/*BOXES AND BUTTONS*/
+/*text box*/
+#feelingInput{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/*submit button font*/
+#submitButton{
+    background-color: #C5D975;
+    color: #dfe1d0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*info button*/
+#infoButton{
+    font-family: Georgia, serif, sans-serif;
+    background-color:#E77c97;
+    border-color: #220f00;
+    border-radius: 4px;
+    color: #220f00;
+    width: 180px;
+    height: 100px;
+    margin: 10px;
+    flex:2;
+    flex-direction: column;
+    flex-wrap: inherit;
+}
+
+/*IMAGES*/
+/* makes sure pixel art is displayed as pixeled*/
+#outputImage{
+    image-rendering: pixelated;
+    margin: auto;
+    outline: none;
+    width: 200px;
+    height: 200px;
+
+}
+
+#titleImage{
+    display: block;
+    image-rendering: pixelated;
+    width:400px;
+    height: 100px;
+    margin: auto;
+}
+
+
+/* layout for site*/
+header{
+    display: block;
+    padding: 20px;
+}
+
+body{
+    display: block;
+    padding: 150px;
+    background-color: #e5e5de;
+    background-blend-mode: overlay;
+    background-image: url("bg5.png");
+}
+
+main{
+    display: flex;
+    background-color: #f7f8f0;
+    padding: 0px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-style: groove;
+    border-color: #220f00;
+    justify-content: center;
+    min-height: 450px;
+}
+
+section{
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    bottom: 100px
+}

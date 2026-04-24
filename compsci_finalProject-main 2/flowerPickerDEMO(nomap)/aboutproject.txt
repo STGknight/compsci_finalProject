@@ -1,0 +1,32 @@
+A user wants to make a bouquet for a love one;
+they choose sentiment & color
+
+
+flowers are associated with sentiments
+customize a bouquet by simply entering feelings wanted to convey
+
+
+///////sample
+Red + Love: red rose
+Orange + Hate: orange lily
+Yellow + Happy: Sunflower
+Green + Good Luck: green hydrangea
+Blue + Melancholy: blue violet
+Purple + Mystery: purple orchid
+White + Promise: lily of the valley
+Pink Lily : Innocence
+Black Tulip: Strength
+
+
+///color pallet
+
+#C5D975
+#E77c97
+#dfe1d0
+#8a2848
+#220f00
+
+
+notes:
+the markers aren't totally exact
+cannot figure out how to get it to max its width and shrink when the tab minimizes
